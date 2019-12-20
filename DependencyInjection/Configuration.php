@@ -17,8 +17,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('jmose_command_scheduler');
+        $treeBuilder = new TreeBuilder('jmose_command_scheduler');
+        $rootNode = method_exists(TreeBuilder::class, 'getRootNode') ? $treeBuilder->getRootNode() : $treeBuilder->root('jmose_command_scheduler');
         $rootNode
             ->children()
                 ->scalarNode('doctrine_manager')->defaultValue('default')->end()
