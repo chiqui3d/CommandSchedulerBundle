@@ -3,7 +3,7 @@
 namespace JMose\CommandSchedulerBundle\Command;
 
 use JMose\CommandSchedulerBundle\Entity\ScheduledCommand;
-use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -15,7 +15,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  * @author  Marcel Pfeiffer <m.pfeiffer@strucnamics.de>
  * @package JMose\CommandSchedulerBundle\Command
  */
-class UnlockCommand extends ContainerAwareCommand
+class UnlockCommand extends Command
 {
 
     /**
